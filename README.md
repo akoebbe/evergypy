@@ -23,7 +23,7 @@ https://koebbe.stoplight.io/docs/evergy-portal-api/branches/main/4fe7503430702-e
 
 ## Usage
 ```python
-from evergy.evergy import Evergy
+from evergypy import Evergy
 
 evergy = Evergy("<username>", "<password>", "<accountnumber>", "<premiseid>")
 
