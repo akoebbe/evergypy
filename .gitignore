@@ -50,9 +50,10 @@ crashlytics-build.properties
 fabric.properties
 /venv/
 /docs/_build/
-evergy/__pycache__/*
+__pycache__/*
 dist/*
 build/*
+.idea
 evergy.egg-info/dependency_links.txt
 evergy.egg-info/PKG-INFO
 evergy.egg-info/requires.txt

@@ -2,30 +2,30 @@
 [![Latest Version on PyPi](https://badge.fury.io/py/evergy.svg)](https://pypi.org/project/evergy/)
 [![Supported Python Versions](https://img.shields.io/pypi/pyversions/evergy.svg)](https://pypi.org/project/evergy/)
 [![Documentation Status](https://readthedocs.org/projects/evergy/badge/?version=latest)](https://evergy.readthedocs.io/en/latest/)
-[![Requriements Status](https://requires.io/github/lawrencefoley/evergy/requirements.svg?branch=master)](https://requires.io/github/lawrencefoley/evergy/requirements/?branch=master)
+[![Requriements Status](https://requires.io/github/akoebbe/evergypy/requirements.svg?branch=master)](https://requires.io/github/akoebbe/evergypy/requirements/?branch=master)
 
-A simple utility that you can use to login to your Evergy account and retrieve you meter readings.
+A library to connect to Evergy's customer portal API to get electrical meter readings. Much credit goes to [Lawrence Foley](https://github.com/lawrencefoley) for the original Python Evergy client (https://github.com/lawrencefoley/evergy)
 
 - **[Documentation](https://evergy.readthedocs.io/en/latest/)**
-- **[Source Code](https://github.com/lawrencefoley/evergy)**
+- **[Source Code](https://github.com/akoebbe/evergypy)**
 
 > **Note: This is an unofficial utility that uses Evergy's non-public API.**
 
 > Previously known as "KCPL"
 
-## ⚠ No Longer Maintained ⚠
-> I no longer have an Evergy account so I can't test this. If you would like to become a maintainer (or even just make small fixes) let me know 🙂
-
 ## Install
 ```
-pip install evergy
+pip install evergypy
 ```
+
+## API Docs
+https://koebbe.stoplight.io/docs/evergy-portal-api/branches/main/4fe7503430702-evergy-portal-api
 
 ## Usage
 ```python
 from evergy.evergy import Evergy
 
-evergy = Evergy("<evergy-username>", "<evergy-password>")
+evergy = Evergy("<username>", "<password>", "<accountnumber>", "<premiseid>")
 
 data = evergy.get_usage()
 print("Today's kWh: " + str(data[-1]["usage"]))
@@ -56,11 +56,11 @@ Latest data:
 ```
 
 ## Home Assistant Integration
-There isn't currently an Home Assistant integration that uses this library. Checkout [this thread to see how others have used it in Home Assistant](https://github.com/lawrencefoley/evergy/issues/8#issuecomment-902181182).
-If you want to use this in a HA integration, please do and I'll link it here!
+Work on this library is in support of a forthcoming Home Assistant integration.
 
 ## Related Projects
 - [KC Water](https://github.com/patrickjmcd/kcwater): A similar project developed by [Patrick McDonagh](https://github.com/patrickjmcd). Check it out!
+- [Evergy Client](https://github.com/lawrencefoley/evergy): The original python client by [Lawrence Foley](https://github.com/lawrencefoley). Thank you!
 
 ## Development
 ### Setup

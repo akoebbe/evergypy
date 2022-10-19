@@ -4,7 +4,7 @@ from codecs import open
 from os import path
 
 from setuptools import find_packages, setup
-import evergy
+import evergypy
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the README file
@@ -12,20 +12,20 @@ with open(path.join(here, "README.md"), encoding="UTF-8") as f:
     long_description = f.read()
 
 setup(
-    name="evergy",
-    version=evergy.__version__,
-    description="A utility that reads electric utility meter data from Evergy.com",
+    name="evergypy",
+    version=evergypy.__version__,
+    description="API client library that reads electric utility meter data from Evergy.com",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url="https://github.com/lawrencefoley/evergy",
+    url="https://github.com/akoebbe/evergypy",
     project_urls={
         'Documentation': 'https://evergy.readthedocs.io/en/latest/',
-        'Source': 'https://github.com/lawrencefoley/evergy/',
-        'Tracker': 'https://github.com/lawrencefoley/evergy/issues',
-        'Maintainer': 'https://lawrencefoley.com',
+        'Source': 'https://github.com/akoebbe/evergypy/',
+        'Tracker': 'https://github.com/akoebbe/evergypy/issues',
+        'Maintainer': 'https://github.com/akoebbe',
     },
-    author="Lawrence Foley",
-    author_email="lawrencefoley@live.com",
+    author="Andrew Koebbe",
+    author_email="andrew@koebbe.com",
     # Classifiers help users find your project by categorizing it.
     #
     # For a list of valid classifiers, see
